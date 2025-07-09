@@ -1,0 +1,29 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.imageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  overflow: hidden; /* prevents overflow when image scales */
+  border-radius: 8px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* 👇 Hover effect: slight zoom + brighten */
+.imageWrapper:hover .image {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
