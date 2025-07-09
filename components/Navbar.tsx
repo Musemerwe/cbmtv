@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav>
       <div className="nav-links">
         <Image src="/images/cbmtvwhitelogo.png"
-        width={100} height={100} className='top-left-element'/>
+        width={100} height={100} alt='' className='top-left-element'/>
         <Link href="/">Home</Link>
         <Link href="/channels">Channels</Link>
         <Link href="/programs">Programs</Link>
