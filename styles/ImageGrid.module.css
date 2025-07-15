@@ -26,4 +26,31 @@
 .imageWrapper:hover .image {
   transform: scale(1.05);
   filter: brightness(1.2);
+  box-shadow: 0 8px 20px hsla(53, 95%, 47%, 1.00);
+}
+
+/*progams grid*/
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.imageWrapper {
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.imageWrapper:hover .image {
+  transform: scale(1.05);
 }

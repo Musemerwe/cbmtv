@@ -1,23 +1,45 @@
 'use client'
-import Link from 'next/link';
-import Image from 'next/image';
 
+import { useState } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
+
   return (
-    <nav>
-      <div className="nav-links">
-        <Image src="/images/cbmtvwhitelogo.png"
-        width={100} height={100} className='top-left-element'/>
-        <Link href="/">Home</Link>
-        <Link href="/channels">Channels</Link>
-        <Link href="/programs">Programs</Link>
-        <Link href="/contact">Contact</Link>
-        <div></div>
+    <div className="mobile-navbar-container">
+      <div className="topnav">
+        {/* Logo */}
+        <Link href="/" className="logo-link">
+          <Image
+            src="/images/cbmtvwhitelogo.png"
+            width={150}
+            height={70}
+            alt="CBM TV Logo"
+            className="navbar-logo"
+          />
+        </Link>
+
+        {/* Hamburger Icon */}
+        <button className="icon" onClick={toggleMenu}>
+          <span className="hamburger-icon">&#9776;</span> {/* This is ☰ */}
+        </button>
+
+        {/* Menu Links */}
+        <div className={`nav-links ${menuOpen ? 'show' : ''}`}>
+          <Link href="/">Home</Link>
+          <Link href="/channels">Channels</Link>
+          <Link href="/programs">Programs</Link>
+          <Link href="/contact">Contact</Link>
+        </div>
       </div>
-    </nav>
-  );
-};
+    </div>
+  )
+}
 
-export default Navbar;
-
+export default Navbar
