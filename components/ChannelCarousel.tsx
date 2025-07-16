@@ -47,11 +47,12 @@ export default function ChannelCarousel() {
                 <Image
                   src={channel.src}
                   alt={`Channel ${i + 1}`}
-                  width={270}
+                  width={240}
                   height={270}
                   style={{
                     borderRadius: "8px",
                     cursor: "pointer",
+                    marginRight: "10px",
                     transition: "transform 0.3s ease, box-shadow 0.3s ease",
                   }}
                   onMouseEnter={(e) => {
