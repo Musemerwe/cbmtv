@@ -375,8 +375,7 @@ a {
 /* Default: Small screens = 2 items */
 .embla__slide {
   flex: 0 0 50%;   /* 2 per row */
-  min-width: 50%;
-  max-width: 50%;
+  padding: 0 8px;
   box-sizing: border-box;
   margin-right: 1rem;
   }
@@ -385,8 +384,6 @@ a {
 @media (min-width: 768px) {
   .embla__slide {
     flex: 0 0 33.33%;  /* 3 per row */
-    min-width: 33.33%;
-    max-width: 33.33%;
   }
 }
 
@@ -394,8 +391,12 @@ a {
 @media (min-width: 1024px) {
   .embla__slide {
     flex: 0 0 20%;  /* 5 per row */
-    min-width: 20%;
-    max-width: 20%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .embla__slide {
+    flex: 0 0 14.285%; /* 7 images per view */
   }
 }
 
