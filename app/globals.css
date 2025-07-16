@@ -374,7 +374,7 @@ a {
 
 /* Default: Small screens = 2 items */
 .embla__slide {
-  flex: 0 0 50%;   /* 2 per row */
+  flex: 0 0 100%;   /* 2 per row */
   padding: 0 8px;
   box-sizing: border-box;
   margin-right: 1rem;
