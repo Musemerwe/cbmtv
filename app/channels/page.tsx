@@ -20,8 +20,8 @@ export default function ChannelsPage() {
   return (
     <div className="channel-grid">
       {channelData.map((channel, index) => (
+      <Link href={`/${channel.slug}`}>
         <div key={index} className="channel-item">
-          <Link href={`/${channel.slug}`}>
           <Image
             src={channel.src}
             alt={channel.name}
@@ -29,10 +29,10 @@ export default function ChannelsPage() {
             height={300}
             className="channel-image"
           />
-          </Link>
           <div className="channel-overlay" />
           <div className="channel-text">{channel.name}</div>
         </div>
+        </Link>
       ))}
     </div>
   );
