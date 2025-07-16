@@ -34,6 +34,7 @@
   height: auto;
   overflow: hidden; /* prevents overflow when image scales */
   border-radius: 8px;
+  transition: transform 0.3s ease
 }
 
 .image {
@@ -57,12 +58,6 @@
   gap: 16px;
   padding: 20px;
   justify-items: center;
-}
-
-.imageWrapper {
-  overflow: hidden;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
 }
 
 .image {
