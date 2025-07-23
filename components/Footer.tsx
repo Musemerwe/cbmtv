@@ -44,8 +44,8 @@ export default function Footer() {
       {/* Logo */}
       <div style={{ marginBottom: "1rem" }}>
         <Image
-          src="/logo.png" // make sure this path is correct
-          alt="CBM TV Logo"
+          src="/images/CBM TV Yellow Logo.png" // make sure this path is correct
+          alt=""
           width={100}
           height={40}
         />
