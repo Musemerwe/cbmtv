@@ -1,0 +1,66 @@
+/* UNIVERSAL FULL-WIDTH GRID (Edge-to-Edge) */
+.grid,
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Small screens: 2 columns */
+  gap: 1rem;
+  padding: 0;           /* Remove padding to go edge-to-edge */
+  margin: 0;
+  width: 100vw;         /* Full screen width */
+  box-sizing: border-box;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 640px) {
+  .grid,
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Medium: 3 columns */
+@media (min-width: 768px) {
+  .grid,
+  .gridContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop: 4 columns */
+@media (min-width: 1024px) {
+  .grid,
+  .gridContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* IMAGE WRAPPER */
+.imageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* IMAGE STYLES */
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Use cover for best fill */
+  border-radius: 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border: 3px solid transparent;
+}
+
+/* HOVER EFFECT */
+.imageWrapper:hover .image {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+  border: 3px solid yellow; /* Yellow glow */
+}
